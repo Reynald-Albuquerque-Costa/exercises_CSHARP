@@ -6,7 +6,12 @@ namespace ex020
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Em que cidade você nasceu? ");
+            string cid = Convert.ToString(Console.ReadLine());   
+
+            var cidade = cid.Trim();
+
+            Console.WriteLine(cidade.Substring(0, 3).ToUpper() == "SÃO");
         }
     }
 }
