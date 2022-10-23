@@ -7,11 +7,11 @@ namespace ex008
         static void Main(string[] args)
         {
             Console.WriteLine("Quanto de dinheiro você tem na carteira? R$");
-            double din = Convert.ToDouble(Console.ReadLine());
+            decimal din = Convert.ToDecimal(Console.ReadLine());
 
-            double dol = din / 5.20;
+            decimal dol = din / 5.20M;
 
-            Console.WriteLine($"Com R${din} você pode comprar US${dol}");
+            Console.WriteLine($"Com R$ {din} você pode comprar US$ {dol.ToString("F2")}");
         }
     }
 }

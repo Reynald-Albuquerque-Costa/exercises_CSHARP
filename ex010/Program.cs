@@ -7,11 +7,11 @@ namespace ex010
         static void Main(string[] args)
         {
             Console.WriteLine("Qual é o preço do produto? R$ ");
-            double preco = Convert.ToDouble(Console.ReadLine());
+            decimal preco = Convert.ToDecimal(Console.ReadLine());
 
-            var desconto = preco - (preco * 0.05);
+            decimal desconto = preco - (preco * 0.05M);
 
-            Console.WriteLine($"O produto que custavo R${preco}, na promoção com desconto de 5% vai custar R${desconto}");
+            Console.WriteLine($"O produto que custava R${preco}, na promoção com desconto de 5% vai custar R${desconto.ToString("F2")}");
 
         }
     }

@@ -7,11 +7,11 @@ namespace ex011
         static void Main(string[] args)
         {
             Console.WriteLine("Qual o salário do funcionário? R$ ");
-            double salario = Convert.ToDouble(Console.ReadLine());
+            decimal salario = Convert.ToDecimal(Console.ReadLine());
 
-            var aumento = salario + (salario * 0.15);
+            decimal aumento = salario + (salario * 0.15M);
 
-            Console.WriteLine($"Um funcionário que ganhava R${salario}, com um aumento de 15%, passa a receber R${aumento}");
+            Console.WriteLine($"Um funcionário que ganhava R${salario}, com um aumento de 15%, passa a receber R${aumento.ToString("F2")}");
 
         }
     }
