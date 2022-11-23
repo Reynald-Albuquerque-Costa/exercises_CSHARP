@@ -7,17 +7,23 @@ namespace ex030
         static void Main(string[] args)
         {
             Console.WriteLine("Primeiro segmento: ");
-            double r1 = Convert.ToDouble(Console.ReadLine());
+            float r1 = float.Parse(Console.ReadLine());
 
             Console.WriteLine("Segundo segmento: ");
-            double r2 = Convert.ToDouble(Console.ReadLine());
+            float r2 = float.Parse(Console.ReadLine());
 
             Console.WriteLine("Terceiro segmento: ");
-            double r3 = Convert.ToDouble(Console.ReadLine());
+            float r3 = float.Parse(Console.ReadLine());
 
-            if(r1 < r2 + r3 && r2 < r1 + r3 && r3 < r1 + r2)
+            if (r1 < r2 + r3 && r2 < r1 + r3 && r3 < r1 + r2)
             {
-                Console.WriteLine("Os segmentos acima PODEM FORMAR um triângulo!");
+                Console.WriteLine("Os segmentos acima PODEM FORMAR um triângulo! ");
+                if (r1 == r2 && r2 == r3)
+                    Console.WriteLine("EQUILÁTERO! ");
+                else if (r1 != r2 && r2 != r3 && r3 != r1)
+                    Console.WriteLine("ESCALENO! ");
+                else
+                    Console.WriteLine("ISÓSCELES! ");
             }
             else
             {
